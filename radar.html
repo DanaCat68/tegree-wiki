@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tegree Wiki - Radar</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #d5e5f5;
+    background-image: url("Tag1.png");
+    background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
+  }
+  .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
+  .left-btn { width: 40px; height: 40px; background-color: #0a1628; border: 2px solid #3a74c4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5fa2ff; font-size: 18px; cursor: pointer; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px 20px 40px 80px; }
+  header { display: flex; align-items: center; padding: 30px 0 20px 0; }
+  .wiki-logo { width: 80px; height: 80px; background-color: #0d1f3d; border: 2px solid #4a8dff; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px; margin-right: 20px; text-align: center; }
+  .header-content h1 { margin: 0 0 10px 0; color: #4a8dff; font-size: 28px; font-weight: 500; }
+  .nav-links a { color: #a0b8d0; text-decoration: none; font-size: 12px; margin-right: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+  .nav-links a:hover { color: #fff; }
+  .top-right-stats { margin-left: auto; color: #a0b8d0; font-size: 12px; text-align: right; }
+  .main-wrapper { background-color: #040b14; border: 1px solid #1a3c6e; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+  .content-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; border-bottom: 1px solid #1a3c6e; }
+  .content-header h2 { margin: 0; font-size: 32px; font-weight: 400; color: #ffffff; }
+  .content-actions { display: flex; gap: 15px; font-size: 12px; color: #4a8dff; text-transform: uppercase; font-weight: bold; }
+  .article-content { padding: 30px 50px; }
+  
+  /* 文本与排版 */
+  .text-block { color: #b0cce6; font-size: 15px; line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+  .blue-text { color: #4a8dff; font-style: italic; font-weight: bold; }
+  a { color: #4a8dff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  /* 标题样式 */
+  .section-title { color: #fff; font-size: 22px; margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #1a3c6e; padding-bottom: 5px; }
+  .sub-title { color: #8bb9ff; font-size: 18px; margin-top: 20px; margin-bottom: 10px; font-weight: bold; }
+  
+  /* 信息框 */
+  .info-box {
+    background: #0a1628;
+    border: 1px solid #1a3c6e;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+  }
+  .info-box h4 { margin: 0 0 10px 0; color: #fff; font-size: 16px; }
+  .info-box ul { margin: 0; padding-left: 20px; color: #b0cce6; font-size: 14px; line-height: 1.8; }
+  
+  hr.divider { border: 0; height: 1px; background: #1a3c6e; margin: 30px 0; }
+</style>
+</head>
+<body>
+
+  <div class="left-rail">
+    <div class="left-btn">⛶</div>
+    <div class="left-btn">✎</div>
+    <div class="left-btn">ℹ</div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="wiki-logo">TEGREE<br>WIKI</div>
+      <div class="header-content">
+        <h1>Tegree (Roblox Game) Wiki</h1>
+        <div class="nav-links">
+          <a href="index.html">← Back to Home</a>
+        </div>
+      </div>
+      <div class="top-right-stats">4 PAGES</div>
+    </header>
+
+    <div class="main-wrapper">
+      <div class="content-header">
+        <h2>Radar</h2>
+        <div class="content-actions">
+          <span>Sign in to save</span>
+          <span>Edit</span>
+          <span>⋮</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+        
+        <div class="text-block">
+          The <span class="blue-text">Radar</span> is the most critical tool for any storm chaser in Tegree. It is a simulated Doppler radar system that allows you to track precipitation, analyze storm structures, locate your deployed probes, and safely navigate around tornadoes. Mastering the radar is the difference between a successful intercept and being caught off guard.
+        </div>
+
+        <div class="info-box">
+          <h4>Quick Controls & Info</h4>
+          <ul>
+            <li><strong>Toggle Radar:</strong> Press the Radar icon on the left sidebar, or press the <strong>[M]</strong> key on your keyboard.</li>
+            <li><strong>Update Delay:</strong> The radar data refreshes every <strong>8 seconds</strong> (simulating real-world radar volume scans).</li>
+            <li><strong>Player Tracking:</strong> Your position is updated in real-time, while the weather data lags slightly behind.</li>
+          </ul>
+        </div>
+
+        <!-- ================= 雷达模式 ================= -->
+        <div class="section-title">Radar Modes (Base Products)</div>
+        <div class="text-block">
+          The radar system features two primary modes, mimicking real-life NEXRAD (WSR-88D) systems. You can toggle between them using the buttons on the side of the radar screen.
+        </div>
+
+        <div class="sub-title">Reflectivity (Base Reflectivity)</div>
+        <div class="text-block">
+          Reflectivity measures the amount of microwave energy scattered back to the radar by precipitation (rain, hail, and snow). It is primarily used to determine the <strong>intensity</strong> and <strong>location</strong> of precipitation. 
+          <br><br>
+          In Tegree, higher reflectivity values (usually shown as heavier colors like deep red or purple on the color bar) indicate intense rain or large hail. This mode is best for identifying the <strong>hook echo</strong>, the <strong>FFD (Forward Flank Downdraft)</strong>, and the <strong>inflow notch</strong>. However, it does not directly show you the wind speed or rotation.
+        </div>
+
+        <div class="sub-title">Velocity (Base Velocity)</div>
+        <div class="text-block">
+          Velocity mode uses the Doppler effect to measure the <strong>radial velocity</strong>—the speed at which precipitation is moving toward or away from the radar dish. 
+          <br><br>
+          <strong>Color Interpretation:</strong>
+          <ul>
+            <li><strong>Green:</strong> Winds moving <em>towards</em> the radar.</li>
+            <li><strong>Red:</strong> Winds moving <em>away from</em> the radar.</li>
+          </ul>
+          To identify a tornado or a strong mesocyclone, look for <strong>Velocity Couplets</strong>: areas where bright green (inbound) and bright red (outbound) are right next to each other. Remember the rule: if you are standing at the radar looking at the storm, rotation exists if the red is on the right and green is on the left (counter-clockwise rotation). 
+          <br><br>
+          <em>Advanced Tip: Watch out for "Velocity Folding" (where the colors suddenly wrap around to the opposite side of the color scale). This happens when winds exceed the radar's maximum measurable velocity, indicating extremely violent tornado winds.</em>
+        </div>
+
+        <hr class="divider">
+
+        <!-- ================= 地图图标解读 ================= -->
+        <div class="section-title">Map Icons & Data Interpretation</div>
+
+        <div class="sub-title">Your Location & Other Players</div>
+        <div class="text-block">
+          You are represented on the radar by a <strong>yellow/orange arrow</strong>. The direction the arrow points is the direction your vehicle is facing. Unlike the weather data, your GPS location updates in real-time.
+          <br><br>
+          Other players in the server appear as <strong>white arrows</strong> with their usernames hovering above them. This is incredibly useful for coordinating intercepts, seeing where your friends are, or knowing if another player is dangerously close to a tornado's path.
+        </div>
+
+        <div class="sub-title">Probe Locations (Mesonet Deployments)</div>
+        <div class="text-block">
+          Once you deploy a probe (like a Mesonet or a Tornado Pod), a <strong>specific probe icon</strong> will appear on the radar at its exact location. This is critical for retrieving your data. It allows you to verify if your probe survived the tornado and helps you calculate your path to drive back and collect the wind speed data.
+        </div>
+
+        <div class="sub-title">Precipitation Levels & Visibility</div>
+        <div class="text-block">
+          At the bottom of the Reflectivity radar screen, there is a color bar indicating precipitation levels. 
+          <br><br>
+          <strong>Gameplay Impact:</strong> The higher the precipitation level (the heavier the rain/hail), the harder it will be to see the tornado with your own eyes. If the radar shows deep reds or purples around your position, you are inside the FFD (Forward Flank Downdraft), and your in-game visibility will be drastically reduced. Use the radar to guide you out of the rain and into the clear inflow notch for a better view.
+        </div>
+
+        <hr class="divider">
+
+        <!-- ================= 雷达使用战术 ================= -->
+        <div class="section-title">Tactical Radar Usage</div>
+        <div class="text-block">
+          Don't just stare at the screen. Use the 8-second delay to your advantage:
+        </div>
+        <div class="info-box">
+          <ul>
+            <li><strong>Trend Analysis:</strong> A single frame of radar doesn't tell you much. Watch the hook echo over multiple 8-second updates. Is the hook tightening? Is the velocity couplet getting stronger? This tells you if the tornado is intensifying.</li>
+            <li><strong>Storm Motion:</strong> By watching the radar blobs move, calculate the storm's speed and direction. This helps you decide where to position your vehicle before the tornado arrives, rather than reacting too late.</li>
+            <li><strong>RFD Danger:</strong> Keep an eye on the velocity mode. Sometimes a strong RFD (Rear Flank Downdraft) can look like a tornado on velocity. If you don't see a tight, clear velocity couplet, it might just be straight-line winds from the RFD.</li>
+          </ul>
+        </div>
+
+        <!-- 隐藏的彩蛋入口（鼠标移上去变亮） -->
+        <div style="text-align: center; margin-top: 60px; opacity: 0.08; transition: opacity 0.5s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.08'">
+          <span style="color: #a0b8d0; font-size: 11px; cursor: pointer;">
+            // LOG_038_UNREAD: <a href="teaser.html" style="color: #4a8dff; text-decoration: none;">[ open file ]</a> //
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

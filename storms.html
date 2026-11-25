@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tegree Wiki - Storms</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #d5e5f5;
+    background-image: url("Tag1.png");
+    background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
+  }
+  .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
+  .left-btn { width: 40px; height: 40px; background-color: #0a1628; border: 2px solid #3a74c4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5fa2ff; font-size: 18px; cursor: pointer; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px 20px 40px 80px; }
+  header { display: flex; align-items: center; padding: 30px 0 20px 0; }
+  .wiki-logo { width: 80px; height: 80px; background-color: #0d1f3d; border: 2px solid #4a8dff; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px; margin-right: 20px; text-align: center; }
+  .header-content h1 { margin: 0 0 10px 0; color: #4a8dff; font-size: 28px; font-weight: 500; }
+  .nav-links a { color: #a0b8d0; text-decoration: none; font-size: 12px; margin-right: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+  .nav-links a:hover { color: #fff; }
+  .top-right-stats { margin-left: auto; color: #a0b8d0; font-size: 12px; text-align: right; }
+  .main-wrapper { background-color: #040b14; border: 1px solid #1a3c6e; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+  .content-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; border-bottom: 1px solid #1a3c6e; }
+  .content-header h2 { margin: 0; font-size: 32px; font-weight: 400; color: #ffffff; }
+  .content-actions { display: flex; gap: 15px; font-size: 12px; color: #4a8dff; text-transform: uppercase; font-weight: bold; }
+  .article-content { padding: 30px 50px; }
+  
+  /* 文本与排版 */
+  .text-block { color: #b0cce6; font-size: 15px; line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+  .blue-text { color: #4a8dff; font-style: italic; font-weight: bold; }
+  a { color: #4a8dff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  /* 标题样式 */
+  .section-title { color: #fff; font-size: 22px; margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #1a3c6e; padding-bottom: 5px; }
+  .sub-title { color: #8bb9ff; font-size: 18px; margin-top: 20px; margin-bottom: 10px; font-weight: bold; }
+  
+  /* TL;DR 提示框 */
+  .tldr-box {
+    background: #0a1628;
+    border-left: 4px solid #4a8dff;
+    padding: 15px;
+    font-size: 14px;
+    color: #d5e5f5;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .tldr-box strong { color: #4a8dff; }
+  
+  hr.divider { border: 0; height: 1px; background: #1a3c6e; margin: 30px 0; }
+</style>
+</head>
+<body>
+
+  <div class="left-rail">
+    <div class="left-btn">⛶</div>
+    <div class="left-btn">✎</div>
+    <div class="left-btn">ℹ</div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="wiki-logo">TEGREE<br>WIKI</div>
+      <div class="header-content">
+        <h1>Tegree (Roblox Game) Wiki</h1>
+        <div class="nav-links">
+          <a href="index.html">← Back to Home</a>
+        </div>
+      </div>
+      <div class="top-right-stats">23 PAGES</div>
+    </header>
+
+    <div class="main-wrapper">
+      <div class="content-header">
+        <h2>Storms</h2>
+        <div class="content-actions">
+          <span>Sign in to save</span>
+          <span>Edit</span>
+          <span>⋮</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+        
+        <div class="text-block">
+          Storms are the core mechanic of <span class="blue-text">Tegree</span>. Understanding their formation, structure, and vortex dynamics is critical for survival and maximizing probe data. The game simulates real-world thermodynamics and kinematics, meaning concepts like <strong>CAPE</strong> (Convective Available Potential Energy) and <strong>Wind Shear</strong> directly dictate storm behavior.
+        </div>
+
+        <!-- ================= 风暴生成 ================= -->
+        <div class="section-title">Storm Initiation & Thermodynamics</div>
+        
+        <div class="text-block">
+          Storms typically initiate between 8 AM and midnight in-game, predominantly in the SW corner of the map due to the prevailing NE storm motion. However, depending on the thermodynamic setup, initiation can occur in the SE or NW if wind direction shifts.
+        </div>
+        <div class="text-block">
+          When a storm fires, it begins as a rising cumulus cloud that rapidly forms a flat base. This is driven by <strong>convection</strong>—warm, moist air rising rapidly into a cooler atmosphere. On radar, this appears as an expanding blob of reflectivity. As the storm matures, precipitation begins to fall from the Forward Flank Downdraft (FFD), often obscuring the base with heavy rain and hail.
+        </div>
+        <div class="text-block">
+          <strong>Environmental Thermodynamics:</strong> The behavior of the storm is heavily influenced by the environment. High <strong>CAPE</strong> values provide more buoyant energy, resulting in stronger, more explosive updrafts. <strong>Wind shear</strong> (the change in wind speed and direction with height) helps tilt the updraft, allowing the storm to sustain itself and separate the precipitation from the rotating mesocyclone. Additionally, low-level <strong>storm-relative helicity (SRH)</strong> is critical; high SRH values indicate strong twisting motion in the lower atmosphere, which is a key precursor to tornadogenesis.
+        </div>
+
+        <div class="text-block">
+          Soon after the FFD develops, a hook echo forms on the SW corner or southern tip of the storm. This hook indicates a rotating updraft. On velocity radar, you can confirm rotation by spotting high outbound velocities (red) very close to high inbound velocities (green). <em>(Note: Rotation is only confirmed if the red is on the right side relative to the radar's location).</em>
+        </div>
+
+        <div class="tldr-box">
+          <strong>TL;DR:</strong> Storms fire in the SW and move NE. High CAPE makes them stronger, wind shear keeps them organized. Look for the hook echo on radar—it's the first sign of a rotating mesocyclone ready to produce a tornado.
+        </div>
+
+        <hr class="divider">
+
+        <!-- ================= 超级单体结构 ================= -->
+        <div class="section-title">Supercell Structure & Kinematics</div>
+        
+        <div class="text-block">
+          Understanding supercell structure gives you a massive advantage. Features like the RFD cut and Tail Clouds can literally point you to where a tornado is forming.
+        </div>
+
+        <div class="sub-title">Mesocyclone</div>
+        <div class="text-block">
+          A storm-scale rotation. Tornadoes form directly beneath the mesocyclone. Do not confuse this with a wall cloud; the mesocyclone is the broader rotation of the updraft, while the wall cloud is a lowered, visible condensation funnel beneath it.
+        </div>
+
+        <div class="sub-title">RFD (Rear Flank Downdraft)</div>
+        <div class="text-block">
+          A region of descending air behind the mesocyclone that wraps into the circulation. Thermodynamically, this is cooler, drier air sinking rapidly. On radar, this appears as rain feeding into the ball at the end of a hook echo. <strong>Caution:</strong> RFD winds can exceed 65+ mph and often cause confusion when estimating tornado wind-field size. The RFD is crucial for tornadogenesis—as it wraps around the mesocyclone, it can tighten the low-level circulation and baroclinically generate vorticity, eventually leading to the formation of a tornado.
+        </div>
+
+        <div class="sub-title">FFD (Forward Flank Downdraft)</div>
+        <div class="text-block">
+          The large area of precipitation typically north of the storm base. This downdraft is driven by evaporative cooling and precipitation loading, bringing heavy rain, high winds, and hail. Avoid this area if you want clear views of the tornado.
+        </div>
+
+        <div class="sub-title">Inflow & Tail Cloud</div>
+        <div class="text-block">
+          Inflow is the warm, moist air feeding into the mesocyclone from the East. The Tail Cloud (or inflow tail) is a visible cloud of condensation that feeds directly into the wall cloud. The presence of a strong tail cloud indicates robust low-level inflow, which is highly favorable for tornado development. The "inflow notch" (a clear area on radar between the hook and FFD) is the best place to position yourself for a clear view.
+        </div>
+
+        <div class="sub-title">Horseshoe</div>
+        <div class="text-block">
+          A horseshoe-shaped cut in the storm base. If you spot one, a tornado is likely forming or already on the ground at the northern end of the feature.
+        </div>
+
+        <div class="tldr-box">
+          <strong>TL;DR:</strong> Look for the RFD cut and tail clouds. The tail cloud points toward the wall cloud and potential tornado. The inflow notch is the safest viewing spot. The RFD is the thermodynamic engine that often tightens the rotation to produce a tornado.
+        </div>
+
+        <hr class="divider">
+
+        <!-- ================= 龙卷风动力学 ================= -->
+        <div class="section-title">Tornado & Vortex Dynamics</div>
+        
+        <div class="text-block">
+          Tornado dynamics in <span class="blue-text">Tegree</span> are realistic. Learning how the vortex is structured can help you get higher wind speeds, place probes, and earn more money.
+        </div>
+
+        <div class="sub-title">Leading Edge (Right Side)</div>
+        <div class="text-block">
+          This is the strongest part of the tornado, relative to its motion. The highest winds and most severe damage occur here. For smaller tornadoes, the strongest winds are at the edge of the funnel; for wider tornadoes, they are deeper inside. The leading edge is "wider," meaning the strong winds extend further out—be careful getting close.
+        </div>
+
+        <div class="sub-title">Trailing Edge (Left Side)</div>
+        <div class="text-block">
+          This is the weakest part of the tornado. Use the trailing edge to slip past a tornado, get close safely, or attempt intercepts with weaker vehicles. The winds are closer to the eye, allowing you to slip by.
+        </div>
+
+        <div class="sub-title">The Eye</div>
+        <div class="text-block">
+          The center of the vortex, a spot of relative calm. Be careful: wide tornadoes might trick you into exiting shelter or undeploying too early. Wait until you see the funnel leaving before making a move.
+        </div>
+
+        <div class="sub-title">Best Intercept Location</div>
+        <div class="text-block">
+          The core of the leading edge (the right side) gives the highest wind speeds and most money. However, it also carries the highest risk of being lofted. Positioning here requires a strong interceptor.
+        </div>
+
+        <div class="tldr-box">
+          <strong>TL;DR:</strong> Always aim for the right side (leading edge) of the tornado for maximum wind speeds and probe data. Use the left side (trailing edge) to escape or pass by safely. Beware the calm eye—don't stop your engine until the funnel is gone.
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

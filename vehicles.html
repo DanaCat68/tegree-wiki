@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tegree Wiki - Vehicles</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #d5e5f5;
+    background-image: url("Tag1.png");
+    background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
+  }
+  .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
+  .left-btn { width: 40px; height: 40px; background-color: #0a1628; border: 2px solid #3a74c4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5fa2ff; font-size: 18px; cursor: pointer; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px 20px 40px 80px; }
+  header { display: flex; align-items: center; padding: 30px 0 20px 0; }
+  .wiki-logo { width: 80px; height: 80px; background-color: #0d1f3d; border: 2px solid #4a8dff; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px; margin-right: 20px; text-align: center; }
+  .header-content h1 { margin: 0 0 10px 0; color: #4a8dff; font-size: 28px; font-weight: 500; }
+  .nav-links a { color: #a0b8d0; text-decoration: none; font-size: 12px; margin-right: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: 0.2s; }
+  .nav-links a:hover { color: #fff; }
+  .top-right-stats { margin-left: auto; color: #a0b8d0; font-size: 12px; text-align: right; }
+  .main-wrapper { background-color: #040b14; border: 1px solid #1a3c6e; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+  .content-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; border-bottom: 1px solid #1a3c6e; }
+  .content-header h2 { margin: 0; font-size: 32px; font-weight: 400; color: #ffffff; }
+  .content-actions { display: flex; gap: 15px; font-size: 12px; color: #4a8dff; text-transform: uppercase; font-weight: bold; }
+  .article-content { padding: 30px 50px; }
+  .text-block { color: #b0cce6; font-size: 15px; line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+  .blue-text { color: #4a8dff; font-style: italic; font-weight: bold; }
+  a { color: #4a8dff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  /* 车辆页面特有样式 */
+  .category-title { color: #fff; font-size: 22px; margin-top: 30px; margin-bottom: 10px; border-bottom: 1px solid #1a3c6e; padding-bottom: 5px; }
+  .category-desc { color: #a0b8d0; font-size: 14px; margin-bottom: 20px; font-style: italic; }
+  
+  .vehicle-entry { margin-bottom: 30px; background: #0a1628; padding: 20px; border: 1px solid #1a3c6e; border-radius: 4px; display: flex; gap: 20px; flex-wrap: wrap; }
+  
+  /* 图片占位符样式 */
+  .vehicle-image-placeholder {
+    width: 260px;
+    height: 160px;
+    background-color: #02060d;
+    border: 1px dashed #1a3c6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a8dff;
+    font-size: 12px;
+    text-align: center;
+    flex-shrink: 0;
+    text-transform: uppercase;
+  }
+  
+  .vehicle-info { flex: 1; min-width: 300px; }
+  .vehicle-name { color: #4a8dff; font-size: 18px; font-weight: bold; margin-top: 0; margin-bottom: 10px; }
+  .vehicle-desc { color: #b0cce6; font-size: 14px; line-height: 1.6; margin-bottom: 15px; text-align: justify; }
+  .vehicle-stats { background: #040b14; padding: 15px; border-left: 4px solid #4a8dff; font-size: 14px; color: #d5e5f5; }
+  .vehicle-stats strong { color: #fff; }
+</style>
+</head>
+<body>
+
+  <div class="left-rail">
+    <div class="left-btn">⛶</div>
+    <div class="left-btn">✎</div>
+    <div class="left-btn">ℹ</div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="wiki-logo">TEGREE<br>WIKI</div>
+      <div class="header-content">
+        <h1>Tegree (Roblox Game) Wiki</h1>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="vehicles.html" style="color: #fff;">Vehicles</a>
+          <a href="storms.html">Storms</a>
+          <a href="radar.html">Radar</a>
+          <a href="email.html" style="opacity: 0.6;">Email</a>
+        </div>
+      </div>
+      <div class="top-right-stats">5 PAGES</div>
+    </header>
+
+    <div class="main-wrapper">
+      <div class="content-header">
+        <h2>Vehicles</h2>
+        <div class="content-actions">
+          <span>Sign in to save</span>
+          <span>Edit</span>
+          <span>⋮</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+        
+        <div class="text-block">
+          This page lists all the vehicles available in <span class="blue-text">Tegree</span>. Vehicles are categorized by their intended role. The current Alpha 0.01 economy is highly punishing; obtaining a top-tier interceptor requires significant dedication and risk-taking. 
+        </div>
+
+        <!-- ================= 平民车 ================= -->
+        <div class="category-title">Regular Vehicles (Dealership)</div>
+        <div class="category-desc">Standard civilian vehicles. Essential for navigating the map and earning initial cash, but they will be destroyed instantly by any direct tornado impact.</div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ FORD EXPLORER IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">Ford Explorer</div>
+            <div class="vehicle-desc">
+              The starting vehicle. It is a standard, unmodified SUV that offers a relatively comfortable ride on paved roads. It lacks any protective armor or off-road modifications, so you must strictly avoid the storm's path while driving this.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 95 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 70 MPH<br>
+              <strong>Price:</strong> $15,000<br>
+              <strong>Max Wind Threshold:</strong> 105 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ SUBARU FORESTER IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">Subaru Forester</div>
+            <div class="vehicle-desc">
+              A popular civilian choice for storm spotters. The Forester's symmetrical all-wheel drive and lightweight chassis make it surprisingly nimble on unpaved backroads. It is excellent for quick repositioning, but its thin sheet metal offers zero protection against hail or debris.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 105 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 85 MPH<br>
+              <strong>Price:</strong> $35,000<br>
+              <strong>Max Wind Threshold:</strong> 110 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ DOMINATOR FORE IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">Dominator Fore</div>
+            <div class="vehicle-desc">
+              A customized Subaru Forester equipped with a roof-mounted weather station and a light bar. While it looks like an interceptor, it is still a civilian vehicle. It is highly agile and perfect for navigating debris fields, but it cannot survive a direct hit from even an EF1 tornado.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 110 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 90 MPH<br>
+              <strong>Price:</strong> $55,000<br>
+              <strong>Max Wind Threshold:</strong> 115 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ DODGE RAM 3500 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">Dodge Ram 3500</div>
+            <div class="vehicle-desc">
+              A heavy-duty pickup. The Cummins diesel engine provides massive torque, making it excellent for towing and navigating deep mud. Its heavy weight makes it sluggish on tight turns. It is the expensive bridge between civilian vehicles and real interceptors.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 95 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 80 MPH<br>
+              <strong>Price:</strong> $85,000<br>
+              <strong>Max Wind Threshold:</strong> 120 MPH
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 拦截车 ================= -->
+        <div class="category-title">Chaser Vehicles (Interceptors)</div>
+        <div class="category-desc">Armored vehicles designed to deploy anchoring spikes and drive directly into the vortex. These are incredibly expensive to purchase and maintain.</div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ TORNADO PUNCHER IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">Tornado Puncher</div>
+            <div class="vehicle-desc">
+              The cheapest entry-level interceptor. It is built from a heavily welded steel frame. It's slow and extremely heavy, but it can withstand an EF2 tornado. The deployment system is rudimentary and takes time, making it a tough vehicle to master.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 75 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 55 MPH<br>
+              <strong>Price:</strong> $120,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 90 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 140 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ TORNADO ATTACK IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">Tornado Attack (TA-1)</div>
+            <div class="vehicle-desc">
+              Based on a custom-built Baja racing truck. It features a hydraulic lowering system that deploys in seconds, creating a suction effect to keep the wind out. It is fast and agile for an interceptor, but lacks the armor to survive an EF4+. 
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 110 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 75 MPH<br>
+              <strong>Price:</strong> $180,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 115 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 155 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ ARMADILLO IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">Armadillo</div>
+            <div class="vehicle-desc">
+              A low-profile armored truck with a wide, flat bottom. It uses massive hydraulic spikes to anchor itself. It has an extremely low center of gravity, making it highly stable, but it accelerates like a brick and its deployment sequence is painfully slow.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 95 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 80 MPH<br>
+              <strong>Price:</strong> $250,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 110 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 220 MPH<br>
+              <strong>Deployment Time:</strong> ~21 seconds
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ SRV DOMINATOR 1 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">SRV Dominator 1</div>
+            <div class="vehicle-desc">
+              The classic storm chasing vehicle. Built on a 2007 Chevy Tahoe, it features bulletproof Lexan windows and an external roll cage. It is the cheapest way to get into the Dominator series, but it struggles in unpaved terrain and has a lower wind threshold than its successors.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 100 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 75 MPH<br>
+              <strong>Price:</strong> $300,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 120 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 165 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ TIV 1 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">TIV 1</div>
+            <div class="vehicle-desc">
+              A massive, heavily armored Ford F-450 designed for IMAX filming. The steel plate and thick polycarbonate windows make it incredibly tough, but its engine is underpowered for its weight. Reaching the tornado in time is your biggest challenge.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 90 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 65 MPH<br>
+              <strong>Price:</strong> $350,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 140 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 165 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ SRV DOMINATOR 2 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">SRV Dominator 2</div>
+            <div class="vehicle-desc">
+              Built on a GMC Yukon XL, this vehicle was made famous for surviving the 2013 El Reno tornado. It features improved aerodynamics and a stronger frame. It's a versatile interceptor that can handle nearly any situation.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 100 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 75 MPH<br>
+              <strong>Price:</strong> $450,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 130 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 185 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ SRV DOMINATOR 3 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">SRV Dominator 3</div>
+            <div class="vehicle-desc">
+              The latest and greatest in the Dominator series. Based on a Ford F-350, it features gull-wing doors and a highly advanced airbag suspension system. It is incredibly heavy, giving it unmatched stability during direct vortex penetration.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 100 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 75 MPH<br>
+              <strong>Price:</strong> $600,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 140 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 210 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ TIV 2 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">TIV 2</div>
+            <div class="vehicle-desc">
+              The ultimate intercept platform. Built on a Dodge Ram 3500 chassis with a third axle for six-wheel drive. It solves all the problems of TIV 1. With a deployed threshold of 230 MPH, it can park directly inside an EF4 tornado and survive.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 100 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 80 MPH<br>
+              <strong>Price:</strong> $800,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 140 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 230 MPH
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= 特种/雷达 ================= -->
+        <div class="category-title">Special Purpose (Radar)</div>
+        <div class="category-desc">Mobile weather stations designed to gather data from a distance. They are completely unarmored and will be destroyed instantly if a tornado hits them.</div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ DOW 3 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">DOW 3 (Doppler on Wheels)</div>
+            <div class="vehicle-desc">
+              A retired military truck converted into a mobile radar platform. It is slow, top-heavy, and handles poorly off-road. However, it can scan a tornado's wind field from miles away, allowing you to verify intensity before you risk driving in. 
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 85 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 65 MPH<br>
+              <strong>Price:</strong> $500,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 100 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 110 MPH<br>
+              <strong>Ability:</strong> Long-range radar deployment.
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ RAXPOL IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">RaXPol</div>
+            <div class="vehicle-desc">
+              The most advanced radar platform in the game. Built on a Ford F-550, its rapid-scan X-band radar can complete a full volume scan in 20 seconds. It costs more than most interceptors and offers zero protection, but mastering it will yield the most accurate storm data.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 95 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 70 MPH<br>
+              <strong>Price:</strong> $650,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 95 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 105 MPH<br>
+              <strong>Ability:</strong> Rapid 20-second radar scan.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

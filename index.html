@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tegree Wiki - Home</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #d5e5f5;
+    background-image: url("Tag1.png");
+    background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
+  }
+  .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
+  .left-btn { width: 40px; height: 40px; background-color: #0a1628; border: 2px solid #3a74c4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5fa2ff; font-size: 18px; cursor: pointer; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px 20px 40px 80px; }
+  header { display: flex; align-items: center; padding: 30px 0 20px 0; }
+  .wiki-logo { width: 80px; height: 80px; background-color: #0d1f3d; border: 2px solid #4a8dff; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px; margin-right: 20px; text-align: center; }
+  .header-content h1 { margin: 0 0 10px 0; color: #4a8dff; font-size: 28px; font-weight: 500; }
+  .nav-links a { color: #a0b8d0; text-decoration: none; font-size: 12px; margin-right: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: 0.2s; }
+  .nav-links a:hover { color: #fff; }
+  .top-right-stats { margin-left: auto; color: #a0b8d0; font-size: 12px; text-align: right; }
+  .main-wrapper { background-color: #040b14; border: 1px solid #1a3c6e; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+  .content-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; border-bottom: 1px solid #1a3c6e; }
+  .content-header h2 { margin: 0; font-size: 32px; font-weight: 400; color: #ffffff; }
+  .content-actions { display: flex; gap: 15px; font-size: 12px; color: #4a8dff; text-transform: uppercase; font-weight: bold; }
+  .article-content { padding: 30px 50px; }
+  .text-block { color: #b0cce6; font-size: 15px; line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+  .blue-text { color: #4a8dff; font-style: italic; font-weight: bold; }
+  a { color: #4a8dff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr.divider { border: 0; height: 1px; background: #1a3c6e; margin: 30px 0; }
+  .section-title { color: #fff; font-size: 20px; margin-bottom: 20px; font-weight: bold; }
+  
+  /* 网格导航 */
+  .grid-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-card {
+    background-color: #0a1628; border: 1px solid #1a3c6e; height: 160px;
+    position: relative; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.3s ease; text-decoration: none;
+  }
+  .grid-card:hover { border-color: #4a8dff; box-shadow: 0 0 15px rgba(74, 141, 255, 0.4) inset; }
+  .grid-card .card-title { color: #ffffff; font-size: 18px; font-weight: bold; letter-spacing: 2px; z-index: 2; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+  .grid-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(4, 11, 20, 0.7); z-index: 1; pointer-events: none; }
+</style>
+</head>
+<body>
+
+  <div class="left-rail">
+    <div class="left-btn">⛶</div>
+    <div class="left-btn">✎</div>
+    <div class="left-btn">ℹ</div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="wiki-logo">TEGREE<br>WIKI</div>
+      <div class="header-content">
+        <h1>Tegree (Roblox Game) Wiki</h1>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="vehicles.html">Vehicles</a>
+          <a href="storms.html">Storms</a>
+          <a href="radar.html">Radar</a>
+          <a href="email.html" style="opacity: 0.6;">Email</a>
+        </div>
+      </div>
+      <div class="top-right-stats">5 PAGES</div>
+    </header>
+
+    <div class="main-wrapper">
+      <div class="content-header">
+        <h2>Home</h2>
+        <div class="content-actions">
+          <span>Sign in to save</span>
+          <span>Edit</span>
+          <span>⋮</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+        <h3 style="text-align: center; color: #fff; font-size: 18px; margin-bottom: 25px;">Tegree Description & Brief History</h3>
+
+        <div class="text-block">
+          <span class="blue-text">Tegree</span> is a Roblox storm chasing game currently in its very early development stage. The game is being developed by a dedicated two-person team consisting of <span class="blue-text">RENG</span> and <span class="blue-text">Vertex23</span>. As of now, the game has only released its first initial testing version.
+        </div>
+
+        <div class="text-block">
+          The project aims to simulate realistic storm dynamics and vehicle intercepts. Even in this early alpha, <span class="blue-text">Tegree</span> features dynamic weather systems, a variety of interceptors and civilian vehicles, and a robust radar system. The community is growing, and members can stay updated or communicate via the official <a href="#">Discord server</a>.
+        </div>
+
+        <hr class="divider">
+
+        <div style="text-align: center; color: #fff; font-weight: bold; margin-bottom: 15px;">
+          Version History: <a href="#">Alpha 0.01</a>
+        </div>
+
+        <div style="text-align: center; color: #fff; font-weight: bold; margin-bottom: 30px;">
+          (Alpha 0.01 is the current live version. Future updates will be announced on Discord)
+        </div>
+
+        <hr class="divider">
+
+        <div style="margin-bottom: 20px; color:#fff; font-weight:bold;">
+          Links to Official Tegree game, accounts, group, & server: 
+          <a href="#">Game</a> / <a href="#">Roblox group</a> / <a href="#">Twitter</a> / <a href="#">Discord</a>
+        </div>
+
+        <div class="section-title">Game contents</div>
+        
+        <div class="grid-nav">
+          <a href="vehicles.html" class="grid-card">
+            <span class="card-title">VEHICLES</span>
+          </a>
+          <a href="storms.html" class="grid-card">
+            <span class="card-title">STORMS</span>
+          </a>
+          <a href="radar.html" class="grid-card">
+            <span class="card-title">RADAR</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

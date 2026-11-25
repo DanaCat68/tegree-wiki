@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>notes.txt</title>
+<style>
+  /* 极简的老式文本编辑器质感 */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* 偏暗的深黑 */
+    color: #a8a8a8; /* 不是纯白，是那种老式显示器的灰白 */
+    font-family: "Consolas", "Courier New", monospace; /* 编程常用等宽字体 */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 屏幕扫描线（极淡） */
+  body::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+    z-index: 999;
+    background-size: 100% 3px;
+    pointer-events: none;
+  }
+
+  .terminal {
+    width: 90%;
+    max-width: 700px;
+    padding: 40px;
+    position: relative;
+  }
+
+  /* 闪烁光标 */
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #a8a8a8;
+    animation: blink 1s step-end infinite;
+    vertical-align: text-bottom;
+    margin-left: 4px;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* 文本行 */
+  .line {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+  }
+
+  /* 图片容器（默认隐藏，用于淡入） */
+  #image-container {
+    margin-top: 40px;
+    text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 3s ease-in; /* 缓慢浮现 */
+  }
+
+  /* 你的图片样式 */
+  #secret-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #222;
+    filter: grayscale(100%) contrast(1.5) brightness(0.6); /* 处理成压抑的黑白风格 */
+  }
+
+  /* 图片下方的配文 */
+  #image-caption {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+    font-style: italic;
+  }
+
+  /* 退出选项 */
+  #exit-choice {
+    margin-top: 50px;
+    display: none;
+    font-size: 15px;
+  }
+  
+  #exit-choice a {
+    color: #888;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  #exit-choice a:hover {
+    color: #fff;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="terminal">
+    <!-- 打字区域 -->
+    <div id="typing-area"></div>
+    <span class="cursor" id="main-cursor"></span>
+
+    <!-- 图片展示区 -->
+    <div id="image-container">
+      <!-- 【请在这里替换你的图片路径】 -->
+      <img id="secret-image" src="secret.png" alt="SECRET">
+      <div id="image-caption">[ no audio. just wind. ]</div>
+    </div>
+
+    <!-- 退出选项 -->
+    <div id="exit-choice">
+      <a href="radar.html">> close terminal</a>
+      <a href="teaser.html">> re-read</a>
+    </div>
+  </div>
+
+  <script>
+    const typingArea = document.getElementById('typing-area');
+    const mainCursor = document.getElementById('main-cursor');
+    const imageContainer = document.getElementById('image-container');
+    const exitChoice = document.getElementById('exit-choice');
+
+    // 随手写的、像日记一样的话
+    const textToType = `we saw it again last night.
+not on the radar. not on the network.
+just out there.
+
+they keep talking about thermodynamic thresholds.
+like numbers will save us.
+we built the cage. we locked the doors.
+but the sky doesn't care about our safety protocols.
+
+look at the photo.
+tell me that's just a storm.
+tell me.`;
+
+    let charIndex = 0;
+
+    // 打字机逻辑
+    function typeText() {
+      if (charIndex < textToType.length) {
+        const char = textToType.charAt(charIndex);
+        
+        // 如果是换行符，转换一下
+        if (char === '\n') {
+          typingArea.innerHTML += '<br>';
+        } else {
+          typingArea.innerHTML += char;
+        }
+
+        charIndex++;
+
+        // 随机打字速度（时快时慢，像人打的）
+        let typeSpeed = Math.floor(Math.random() * 80) + 30;
+        
+        // 遇到标点或者换行时，停顿稍久
+        if (char === '.' || char === ',' || char === '\n') {
+          typeSpeed += 500; 
+        }
+
+        setTimeout(typeText, typeSpeed);
+      } else {
+        // 打字结束
+        mainCursor.style.display = 'none';
+        
+        // 停顿 1.5 秒，让玩家感受一下安静
+        setTimeout(() => {
+          imageContainer.style.display = 'block';
+          
+          // 图片缓慢淡入
+          setTimeout(() => {
+            imageContainer.style.opacity = '1';
+          }, 100);
+          
+          // 图片完全浮现后（大约 3 秒后），显示退出选项
+          setTimeout(() => {
+            exitChoice.style.display = 'block';
+          }, 3500);
+
+        }, 1500);
+      }
+    }
+
+    // 启动打字机
+    setTimeout(typeText, 800);
+
+  </script>
+
+</body>
+</html>
