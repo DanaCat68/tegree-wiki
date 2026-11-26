@@ -9,7 +9,8 @@
     margin: 0; padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #d5e5f5;
-    background-image: url("file:///D:/TegreeWiki/Tag1.png");
+    /* 修复：改成了相对路径 */
+    background-image: url("Tag1.png");
     background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
   }
   .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
@@ -31,13 +32,10 @@
   a { color: #4a8dff; text-decoration: none; }
   a:hover { text-decoration: underline; }
   
-  /* 车辆页面特有样式 */
   .category-title { color: #fff; font-size: 22px; margin-top: 30px; margin-bottom: 10px; border-bottom: 1px solid #1a3c6e; padding-bottom: 5px; }
   .category-desc { color: #a0b8d0; font-size: 14px; margin-bottom: 20px; font-style: italic; }
-  
   .vehicle-entry { margin-bottom: 30px; background: #0a1628; padding: 20px; border: 1px solid #1a3c6e; border-radius: 4px; display: flex; gap: 20px; flex-wrap: wrap; }
   
-  /* 图片样式（含自动裁剪） */
   .vehicle-image, .vehicle-image-placeholder {
     width: 260px;
     height: 160px;
@@ -46,8 +44,8 @@
     flex-shrink: 0;
   }
   .vehicle-image {
-    object-fit: cover; /* 自动裁剪填满，不变形 */
-    object-position: center; /* 居中裁剪，左右超出的会被切掉 */
+    object-fit: cover;
+    object-position: center;
   }
   .vehicle-image-placeholder {
     border: 1px dashed #1a3c6e;
@@ -85,10 +83,11 @@
           <a href="vehicles.html" style="color: #fff;">Vehicles</a>
           <a href="storms.html">Storms</a>
           <a href="radar.html">Radar</a>
+          <a href="updates.html">Updates</a>
           <a href="email.html" style="opacity: 0.6;">Email</a>
         </div>
       </div>
-      <div class="top-right-stats">5 PAGES</div>
+      <div class="top-right-stats">6 PAGES</div>
     </header>
 
     <div class="main-wrapper">
@@ -107,7 +106,6 @@
           This page lists all the vehicles available in <span class="blue-text">Tegree</span>. Vehicles are categorized by their intended role. The current Alpha 0.01 economy is highly punishing; obtaining a top-tier interceptor requires significant dedication and risk-taking. 
         </div>
 
-        <!-- ================= 平民车 ================= -->
         <div class="category-title">Regular Vehicles (Dealership)</div>
         <div class="category-desc">Standard civilian vehicles. Essential for navigating the map and earning initial cash, but they will be destroyed instantly by any direct tornado impact.</div>
 
@@ -175,7 +173,6 @@
           </div>
         </div>
 
-        <!-- ================= 拦截车 ================= -->
         <div class="category-title">Chaser Vehicles (Interceptors)</div>
         <div class="category-desc">Armored vehicles designed to deploy anchoring spikes and drive directly into the vortex. These are incredibly expensive to purchase and maintain.</div>
 
@@ -197,6 +194,7 @@
         </div>
 
         <div class="vehicle-entry">
+          <!-- 图片路径直接写文件名 -->
           <img src="TornadoAttack.jpg" alt="Tornado Attack" class="vehicle-image">
           <div class="vehicle-info">
             <div class="vehicle-name">Tornado Attack (TA-1)</div>
@@ -300,7 +298,6 @@
         </div>
 
         <div class="vehicle-entry">
-          <!-- TIV 2 图片已撤下，恢复为占位符 -->
           <div class="vehicle-image-placeholder">[ TIV 2 IMAGE ]</div>
           <div class="vehicle-info">
             <div class="vehicle-name">TIV 2</div>
@@ -317,7 +314,6 @@
           </div>
         </div>
 
-        <!-- ================= 特种/雷达 ================= -->
         <div class="category-title">Special Purpose (Radar)</div>
         <div class="category-desc">Mobile weather stations designed to gather data from a distance. They are completely unarmored and will be destroyed instantly if a tornado hits them.</div>
 
