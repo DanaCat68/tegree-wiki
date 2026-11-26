@@ -9,7 +9,8 @@
     margin: 0; padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #d5e5f5;
-    background-image: url("file:///D:/TegreeWiki/Tag1.png");
+    /* ✅ 修复：背景图改为相对路径 */
+    background-image: url("Tag1.png");
     background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
   }
   .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
@@ -18,7 +19,7 @@
   header { display: flex; align-items: center; padding: 30px 0 20px 0; }
   .wiki-logo { width: 80px; height: 80px; background-color: #0d1f3d; border: 2px solid #4a8dff; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px; margin-right: 20px; text-align: center; }
   .header-content h1 { margin: 0 0 10px 0; color: #4a8dff; font-size: 28px; font-weight: 500; }
-  .nav-links a { color: #a0b8d0; text-decoration: none; font-size: 12px; margin-right: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+  .nav-links a { color: #a0b8d0; text-decoration: none; font-size: 12px; margin-right: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: 0.2s; }
   .nav-links a:hover { color: #fff; }
   .top-right-stats { margin-left: auto; color: #a0b8d0; font-size: 12px; text-align: right; }
   .main-wrapper { background-color: #040b14; border: 1px solid #1a3c6e; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.8); }
@@ -65,10 +66,15 @@
       <div class="header-content">
         <h1>Tegree (Roblox Game) Wiki</h1>
         <div class="nav-links">
-          <a href="index.html">← Back to Home</a>
+          <a href="index.html">Home</a>
+          <a href="vehicles.html">Vehicles</a>
+          <a href="storms.html">Storms</a>
+          <a href="radar.html" style="color: #fff;">Radar</a>
+          <a href="updates.html">Updates</a>
+          <a href="email.html" style="opacity: 0.6;">Email</a>
         </div>
       </div>
-      <div class="top-right-stats">4 PAGES</div>
+      <div class="top-right-stats">6 PAGES</div>
     </header>
 
     <div class="main-wrapper">

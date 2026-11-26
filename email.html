@@ -9,7 +9,8 @@
     margin: 0; padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #d5e5f5;
-    background-image: url("file:///D:/TegreeWiki/Tag1.png");
+    /* ✅ 修复：背景图改为相对路径 */
+    background-image: url("Tag1.png");
     background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
   }
   .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
@@ -22,7 +23,7 @@
   .nav-links a:hover { color: #fff; }
   .top-right-stats { margin-left: auto; color: #a0b8d0; font-size: 12px; text-align: right; }
   
-  /* Clean text panel */
+  /* 简洁的纯文本面板 */
   .main-wrapper { 
     background-color: #040b14; 
     border: 1px solid #1a3c6e; 
@@ -67,10 +68,11 @@
           <a href="vehicles.html">Vehicles</a>
           <a href="storms.html">Storms</a>
           <a href="radar.html">Radar</a>
+          <a href="updates.html">Updates</a>
           <a href="email.html" style="color: #fff;">Email</a>
         </div>
       </div>
-      <div class="top-right-stats">5 PAGES</div>
+      <div class="top-right-stats">6 PAGES</div>
     </header>
 
     <div class="main-wrapper">

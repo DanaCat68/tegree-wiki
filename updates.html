@@ -9,7 +9,8 @@
     margin: 0; padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #d5e5f5;
-    background-image: url("file:///D:/TegreeWiki/Tag1.png");
+    /* ✅ 修复：背景图改为相对路径 */
+    background-image: url("Tag1.png");
     background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
   }
   .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
@@ -114,7 +115,7 @@
       <div class="article-content">
         
         <div class="text-block">
-          This page just keeps track of what we changed on the <span class="blue-text">Tegree Wiki</span>. No game update info here, just website stuff.
+          This page tracks the changes we made to the <span class="blue-text">Tegree Wiki</span> itself. No game patch notes here, just website stuff.
         </div>
 
         <hr class="divider">
@@ -126,10 +127,11 @@
             <div class="update-date">CURRENT VERSION</div>
           </div>
           <div class="update-content">
-            Finished adding most of the vehicle pictures and cleaned up the text.
+            Fixed the background image bug and added most of the vehicle pictures.
             <ul>
-              <li>Added real images for the Armadillo, Dominator 1, Dominator 3, DOW 3, and RaXPol.</li>
-              <li>Fixed the image boxes so pictures don't stretch. They crop automatically now.</li>
+              <li>Fixed a bug where the background image (`Tag1.png`) would disappear after uploading to the server.</li>
+              <li>Added in-game photos for the Armadillo, Dominator 1, Dominator 3, DOW 3, and RaXPol.</li>
+              <li>Fixed the vehicle image boxes so pictures crop automatically instead of stretching.</li>
               <li>Put up the vehicle prices to make the game more grindy. (Because we need players to stay, lol).</li>
               <li>Added a new <a href="updates.html">Updates</a> tab and an <a href="email.html">Email</a> page for developer notes.</li>
             </ul>
