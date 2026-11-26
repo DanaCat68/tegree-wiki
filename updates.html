@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tegree Wiki - Site Updates</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #d5e5f5;
+    background-image: url("file:///D:/TegreeWiki/Tag1.png");
+    background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
+  }
+  .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
+  .left-btn { width: 40px; height: 40px; background-color: #0a1628; border: 2px solid #3a74c4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #5fa2ff; font-size: 18px; cursor: pointer; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px 20px 40px 80px; }
+  header { display: flex; align-items: center; padding: 30px 0 20px 0; }
+  .wiki-logo { width: 80px; height: 80px; background-color: #0d1f3d; border: 2px solid #4a8dff; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; font-size: 14px; margin-right: 20px; text-align: center; }
+  .header-content h1 { margin: 0 0 10px 0; color: #4a8dff; font-size: 28px; font-weight: 500; }
+  .nav-links a { color: #a0b8d0; text-decoration: none; font-size: 12px; margin-right: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: 0.2s; }
+  .nav-links a:hover { color: #fff; }
+  .top-right-stats { margin-left: auto; color: #a0b8d0; font-size: 12px; text-align: right; }
+  .main-wrapper { background-color: #040b14; border: 1px solid #1a3c6e; padding: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+  .content-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; border-bottom: 1px solid #1a3c6e; }
+  .content-header h2 { margin: 0; font-size: 32px; font-weight: 400; color: #ffffff; }
+  .content-actions { display: flex; gap: 15px; font-size: 12px; color: #4a8dff; text-transform: uppercase; font-weight: bold; }
+  .article-content { padding: 30px 50px; }
+  
+  .text-block { color: #b0cce6; font-size: 15px; line-height: 1.6; margin-bottom: 20px; text-align: justify; }
+  .blue-text { color: #4a8dff; font-style: italic; font-weight: bold; }
+  a { color: #4a8dff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  /* 网站更新日志样式 */
+  .update-entry {
+    margin-bottom: 40px;
+    border-left: 4px solid #4a8dff;
+    padding: 0 0 0 20px;
+  }
+  
+  .update-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+  
+  .update-version {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+  .update-date {
+    color: #7a9bbd;
+    font-size: 13px;
+    font-family: monospace;
+  }
+  
+  .update-content {
+    color: #b0cce6;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  
+  .update-content ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+  }
+  
+  .update-content li {
+    margin-bottom: 10px;
+  }
+  
+  hr.divider { border: 0; height: 1px; background: #1a3c6e; margin: 30px 0; }
+</style>
+</head>
+<body>
+
+  <div class="left-rail">
+    <div class="left-btn">⛶</div>
+    <div class="left-btn">✎</div>
+    <div class="left-btn">ℹ</div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="wiki-logo">TEGREE<br>WIKI</div>
+      <div class="header-content">
+        <h1>Tegree (Roblox Game) Wiki</h1>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="vehicles.html">Vehicles</a>
+          <a href="storms.html">Storms</a>
+          <a href="radar.html">Radar</a>
+          <a href="updates.html" style="color: #fff;">Updates</a>
+          <a href="email.html" style="opacity: 0.6;">Email</a>
+        </div>
+      </div>
+      <div class="top-right-stats">6 PAGES</div>
+    </header>
+
+    <div class="main-wrapper">
+      <div class="content-header">
+        <h2>Site Updates</h2>
+        <div class="content-actions">
+          <span>Sign in to save</span>
+          <span>Edit</span>
+          <span>⋮</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+        
+        <div class="text-block">
+          This page just keeps track of what we changed on the <span class="blue-text">Tegree Wiki</span>. No game update info here, just website stuff.
+        </div>
+
+        <hr class="divider">
+
+        <!-- 网页最新更新 -->
+        <div class="update-entry">
+          <div class="update-header">
+            <div class="update-version">Wiki Update - Version 0.2</div>
+            <div class="update-date">CURRENT VERSION</div>
+          </div>
+          <div class="update-content">
+            Finished adding most of the vehicle pictures and cleaned up the text.
+            <ul>
+              <li>Added real images for the Armadillo, Dominator 1, Dominator 3, DOW 3, and RaXPol.</li>
+              <li>Fixed the image boxes so pictures don't stretch. They crop automatically now.</li>
+              <li>Put up the vehicle prices to make the game more grindy. (Because we need players to stay, lol).</li>
+              <li>Added a new <a href="updates.html">Updates</a> tab and an <a href="email.html">Email</a> page for developer notes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 网页历史更新 -->
+        <div class="update-entry">
+          <div class="update-header">
+            <div class="update-version">Wiki Update - Version 0.1</div>
+            <div class="update-date">PREVIOUS</div>
+          </div>
+          <div class="update-content">
+            Added more pages to explain how the game actually works.
+            <ul>
+              <li>Made a full Radar guide (Reflectivity, Velocity, etc.).</li>
+              <li>Rewrote the Storms page to explain how tornadoes form in-game.</li>
+              <li>Hid a small secret terminal at the bottom of the Radar page if you scroll down...</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 网页初始建立 -->
+        <div class="update-entry">
+          <div class="update-header">
+            <div class="update-version">Wiki Launched</div>
+            <div class="update-date">INITIAL RELEASE</div>
+          </div>
+          <div class="update-content">
+            The very first version of the Wiki is online.
+            <ul>
+              <li>Set up the black and blue layout.</li>
+              <li>Made the Home page and a basic list for Vehicles.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

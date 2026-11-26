@@ -9,7 +9,7 @@
     margin: 0; padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #d5e5f5;
-    background-image: url("Tag1.png");
+    background-image: url("file:///D:/TegreeWiki/Tag1.png");
     background-attachment: fixed; background-position: center; background-size: cover; background-color: #000; 
   }
   .left-rail { position: fixed; left: 20px; top: 120px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
@@ -37,11 +37,19 @@
   
   .vehicle-entry { margin-bottom: 30px; background: #0a1628; padding: 20px; border: 1px solid #1a3c6e; border-radius: 4px; display: flex; gap: 20px; flex-wrap: wrap; }
   
-  /* 图片占位符样式 */
-  .vehicle-image-placeholder {
+  /* 图片样式（含自动裁剪） */
+  .vehicle-image, .vehicle-image-placeholder {
     width: 260px;
     height: 160px;
     background-color: #02060d;
+    border: 1px solid #1a3c6e;
+    flex-shrink: 0;
+  }
+  .vehicle-image {
+    object-fit: cover; /* 自动裁剪填满，不变形 */
+    object-position: center; /* 居中裁剪，左右超出的会被切掉 */
+  }
+  .vehicle-image-placeholder {
     border: 1px dashed #1a3c6e;
     display: flex;
     align-items: center;
@@ -49,7 +57,6 @@
     color: #4a8dff;
     font-size: 12px;
     text-align: center;
-    flex-shrink: 0;
     text-transform: uppercase;
   }
   
@@ -190,7 +197,7 @@
         </div>
 
         <div class="vehicle-entry">
-          <div class="vehicle-image-placeholder">[ TORNADO ATTACK IMAGE ]</div>
+          <img src="TornadoAttack.jpg" alt="Tornado Attack" class="vehicle-image">
           <div class="vehicle-info">
             <div class="vehicle-name">Tornado Attack (TA-1)</div>
             <div class="vehicle-desc">
@@ -207,7 +214,7 @@
         </div>
 
         <div class="vehicle-entry">
-          <div class="vehicle-image-placeholder">[ ARMADILLO IMAGE ]</div>
+          <img src="qiuyu.jpg" alt="Armadillo" class="vehicle-image">
           <div class="vehicle-info">
             <div class="vehicle-name">Armadillo</div>
             <div class="vehicle-desc">
@@ -225,7 +232,7 @@
         </div>
 
         <div class="vehicle-entry">
-          <div class="vehicle-image-placeholder">[ SRV DOMINATOR 1 IMAGE ]</div>
+          <img src="dominator1.jpg" alt="Dominator 1" class="vehicle-image">
           <div class="vehicle-info">
             <div class="vehicle-name">SRV Dominator 1</div>
             <div class="vehicle-desc">
@@ -234,25 +241,8 @@
             <div class="vehicle-stats">
               <strong>Top Speed (Paved):</strong> 100 MPH<br>
               <strong>Top Speed (Unpaved):</strong> 75 MPH<br>
-              <strong>Price:</strong> $300,000<br>
+              <strong>Price:</strong> $250,000<br>
               <strong>Min Wind Threshold (Undeployed):</strong> 120 MPH<br>
-              <strong>Max Wind Threshold (Deployed):</strong> 165 MPH
-            </div>
-          </div>
-        </div>
-
-        <div class="vehicle-entry">
-          <div class="vehicle-image-placeholder">[ TIV 1 IMAGE ]</div>
-          <div class="vehicle-info">
-            <div class="vehicle-name">TIV 1</div>
-            <div class="vehicle-desc">
-              A massive, heavily armored Ford F-450 designed for IMAX filming. The steel plate and thick polycarbonate windows make it incredibly tough, but its engine is underpowered for its weight. Reaching the tornado in time is your biggest challenge.
-            </div>
-            <div class="vehicle-stats">
-              <strong>Top Speed (Paved):</strong> 90 MPH<br>
-              <strong>Top Speed (Unpaved):</strong> 65 MPH<br>
-              <strong>Price:</strong> $350,000<br>
-              <strong>Min Wind Threshold (Undeployed):</strong> 140 MPH<br>
               <strong>Max Wind Threshold (Deployed):</strong> 165 MPH
             </div>
           </div>
@@ -276,7 +266,7 @@
         </div>
 
         <div class="vehicle-entry">
-          <div class="vehicle-image-placeholder">[ SRV DOMINATOR 3 IMAGE ]</div>
+          <img src="dominator3.jpg" alt="Dominator 3" class="vehicle-image">
           <div class="vehicle-info">
             <div class="vehicle-name">SRV Dominator 3</div>
             <div class="vehicle-desc">
@@ -293,6 +283,24 @@
         </div>
 
         <div class="vehicle-entry">
+          <div class="vehicle-image-placeholder">[ TIV 1 IMAGE ]</div>
+          <div class="vehicle-info">
+            <div class="vehicle-name">TIV 1</div>
+            <div class="vehicle-desc">
+              A massive, heavily armored Ford F-450 designed for IMAX filming. The steel plate and thick polycarbonate windows make it incredibly tough, but its engine is underpowered for its weight. Reaching the tornado in time is your biggest challenge.
+            </div>
+            <div class="vehicle-stats">
+              <strong>Top Speed (Paved):</strong> 90 MPH<br>
+              <strong>Top Speed (Unpaved):</strong> 65 MPH<br>
+              <strong>Price:</strong> $350,000<br>
+              <strong>Min Wind Threshold (Undeployed):</strong> 140 MPH<br>
+              <strong>Max Wind Threshold (Deployed):</strong> 165 MPH
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-entry">
+          <!-- TIV 2 图片已撤下，恢复为占位符 -->
           <div class="vehicle-image-placeholder">[ TIV 2 IMAGE ]</div>
           <div class="vehicle-info">
             <div class="vehicle-name">TIV 2</div>
@@ -314,7 +322,7 @@
         <div class="category-desc">Mobile weather stations designed to gather data from a distance. They are completely unarmored and will be destroyed instantly if a tornado hits them.</div>
 
         <div class="vehicle-entry">
-          <div class="vehicle-image-placeholder">[ DOW 3 IMAGE ]</div>
+          <img src="Dow3.jpg" alt="DOW 3" class="vehicle-image">
           <div class="vehicle-info">
             <div class="vehicle-name">DOW 3 (Doppler on Wheels)</div>
             <div class="vehicle-desc">
@@ -332,7 +340,7 @@
         </div>
 
         <div class="vehicle-entry">
-          <div class="vehicle-image-placeholder">[ RAXPOL IMAGE ]</div>
+          <img src="RaXPol.jpg" alt="RaXPol" class="vehicle-image">
           <div class="vehicle-info">
             <div class="vehicle-name">RaXPol</div>
             <div class="vehicle-desc">
@@ -353,7 +361,5 @@
     </div>
   </div>
 
-<script data-goatcounter="https://danacat.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
